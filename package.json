@@ -1,0 +1,26 @@
+{
+  "name": "newsmedia",
+  "version": "0.0.1",
+  "description": "Decentralized News media to ensure the truth of the news and the news by the people to the people over decentralized distributed system(Blockchain).",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueldinesh/newsMedia.git"
+  },
+  "author": "Marvel DC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samueldinesh/newsMedia/issues"
+  },
+  "homepage": "https://github.com/samueldinesh/newsMedia#readme",
+  "dependencies": {
+    "web3": "github:ethereum/web3.js"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
