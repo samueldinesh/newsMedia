@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoP Media</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--script src="js/web3.min.js"></script>
+    <script src="js/require.js"></script-->
+
+</head>
+<body>
+
+   <div class="container">
+
+        <h1>
+      News of People's
+    </h1>
+    <h5>
+      Decentralized News media to ensure the truth of the news and the news by the people to the people over decentralized distributed system(Blockchain).
+
+    </h5>
+    <!--img id="loader" src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif"-->
+        <span id="countIns"></span>
+
+        <h2 id="Statement"> </h2>
+        <span id="Instant"></span>
+        <h2 id="total"></h2>
+        <hr>
+        <div class="row">
+          <div class="column">
+            <!--h5>Cur.Document Id : <h4 id="total"> </h4></h5-->
+            <label for="documentId" class="col-lg-2 control-label">Document Id</label>             
+            <input id="documentId" type="text">
+
+            <label for="certificateType" class="col-lg-2 control-label">Certificate Type</label>
+            <input id="certificateType" type="text">
+
+            <label for="_certifier" class="col-lg-2 control-label">Certificate Issuer</label>
+            <input id="_certifier" type="text">
+
+            <label for="recipient" class="col-lg-2 control-label">Receiving Person</label>
+            <input id="recipient" type="text">
+        </div>
+        <div class="column">
+          <button type="button" class="btn btn-lg btn-warning" onclick="Dapp.issueCert()">Issue Certificate</button>
+          <button type="button" class="btn btn-lg btn-warning" onclick="Dapp.getCert()">Get Certificate</button>
+          <button type="button" class="btn btn-lg btn-warning" onclick="Dapp.verifyCert()">Verify Certificate</button>
+        </div>
+    </div>
+
+    </div>
+
+  <script src="./bundle.js"></script>
+</body>
+</html>

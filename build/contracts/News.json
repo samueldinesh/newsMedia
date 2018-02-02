@@ -1,0 +1,2639 @@
+{
+  "contractName": "News",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "user",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_articleId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Readcount",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_articleId",
+          "type": "uint256"
+        },
+        {
+          "name": "_author",
+          "type": "string"
+        },
+        {
+          "name": "_content",
+          "type": "string"
+        }
+      ],
+      "name": "Writer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_articleId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Reader",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_articleId",
+          "type": "uint256"
+        },
+        {
+          "name": "vote",
+          "type": "bool"
+        }
+      ],
+      "name": "Reviewer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_type",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806107c783398101604052808051906020019091905050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060018190555050610745806100826000396000f30060606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634f8632ba1461007257806389f48986146100c75780638d11996e146100df578063b584be2e146101b4578063e50bf3f2146102ca575b600080fd5b341561007d57600080fd5b610085610301565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100dd6004808035906020019091905050610326565b005b61019a600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061034e565b604051808215151515815260200191505060405180910390f35b34156101bf57600080fd5b6101d560048080359060200190919050506103f1565b604051808060200180602001858152602001848152602001838103835287818151815260200191508051906020019080838360005b8381101561022557808201518184015260208101905061020a565b50505050905090810190601f1680156102525780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b8381101561028b578082015181840152602081019050610270565b50505050905090810190601f1680156102b85780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b6102eb600480803590602001909190803515159060200190919050506105f2565b6040518082815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6001600260008381526020019081526020016000206005016000828254019250508190555050565b600080600260008681526020019081526020016000209050848160000181905550858160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550838160020190805190602001906103ca929190610660565b50828160060190805190602001906103e3929190610660565b506001915050949350505050565b6103f96106e0565b6104016106e0565b60008084600260008781526020019081526020016000206000015414151561042557fe5b601460026000878152602001908152602001600020600401541015151561044857fe5b61045185610326565b600260008681526020019081526020016000206002016002600087815260200190815260200160002060060160026000888152602001908152602001600020600401546002600089815260200190815260200160002060050154838054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105405780601f1061051557610100808354040283529160200191610540565b820191906000526020600020905b81548152906001019060200180831161052357829003601f168201915b50505050509350828054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105dc5780601f106105b1576101008083540402835291602001916105dc565b820191906000526020600020905b8154815290600101906020018083116105bf57829003601f168201915b5050505050925093509350935093509193509193565b600082600260008581526020019081526020016000206000015414151561061557fe5b811561064157601460026000858152602001908152602001600020600401600082825401925050819055505b6002600084815260200190815260200160002060040154905092915050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106a157805160ff19168380011785556106cf565b828001600101855582156106cf579182015b828111156106ce5782518255916020019190600101906106b3565b5b5090506106dc91906106f4565b5090565b602060405190810160405280600081525090565b61071691905b808211156107125760008160009055506001016106fa565b5090565b905600a165627a7a72305820ed18c2f3436594362739b6cd06221a9671beeedabb1c4d30371932bf853648dc0029",
+  "deployedBytecode": "0x60606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634f8632ba1461007257806389f48986146100c75780638d11996e146100df578063b584be2e146101b4578063e50bf3f2146102ca575b600080fd5b341561007d57600080fd5b610085610301565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100dd6004808035906020019091905050610326565b005b61019a600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061034e565b604051808215151515815260200191505060405180910390f35b34156101bf57600080fd5b6101d560048080359060200190919050506103f1565b604051808060200180602001858152602001848152602001838103835287818151815260200191508051906020019080838360005b8381101561022557808201518184015260208101905061020a565b50505050905090810190601f1680156102525780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b8381101561028b578082015181840152602081019050610270565b50505050905090810190601f1680156102b85780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b6102eb600480803590602001909190803515159060200190919050506105f2565b6040518082815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6001600260008381526020019081526020016000206005016000828254019250508190555050565b600080600260008681526020019081526020016000209050848160000181905550858160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550838160020190805190602001906103ca929190610660565b50828160060190805190602001906103e3929190610660565b506001915050949350505050565b6103f96106e0565b6104016106e0565b60008084600260008781526020019081526020016000206000015414151561042557fe5b601460026000878152602001908152602001600020600401541015151561044857fe5b61045185610326565b600260008681526020019081526020016000206002016002600087815260200190815260200160002060060160026000888152602001908152602001600020600401546002600089815260200190815260200160002060050154838054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105405780601f1061051557610100808354040283529160200191610540565b820191906000526020600020905b81548152906001019060200180831161052357829003601f168201915b50505050509350828054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105dc5780601f106105b1576101008083540402835291602001916105dc565b820191906000526020600020905b8154815290600101906020018083116105bf57829003601f168201915b5050505050925093509350935093509193509193565b600082600260008581526020019081526020016000206000015414151561061557fe5b811561064157601460026000858152602001908152602001600020600401600082825401925050819055505b6002600084815260200190815260200160002060040154905092915050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106a157805160ff19168380011785556106cf565b828001600101855582156106cf579182015b828111156106ce5782518255916020019190600101906106b3565b5b5090506106dc91906106f4565b5090565b602060405190810160405280600081525090565b61071691905b808211156107125760008160009055506001016106fa565b5090565b905600a165627a7a72305820ed18c2f3436594362739b6cd06221a9671beeedabb1c4d30371932bf853648dc0029",
+  "sourceMap": "26:1943:1:-;;;424:104;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;494:10;487:4;;:17;;;;;;;;;;;;;;;;;;519:5;508:8;:16;;;;424:104;26:1943;;;;;;",
+  "deployedSourceMap": "26:1943:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;43:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1856:105;;;;;;;;;;;;;;;;;;534:407;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1300:546;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1029:258:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;43:19;;;;;;;;;;;;;:::o;1856:105::-;1944:1;1916:7;:19;1924:10;1916:19;;;;;;;;;;;:25;;;:29;;;;;;;;;;;1856:105;:::o;534:407::-;638:4;683:7;693;:19;701:10;693:19;;;;;;;;;;;683:29;;760:10;744:3;:13;;:26;;;;800:8;780:3;:17;;;:28;;;;;;;;;;;;;;;;;;831:7;818:3;:10;;:20;;;;;;;;;;;;:::i;:::-;;863:8;848:3;:11;;:23;;;;;;;;;;;;:::i;:::-;;897:4;890:11;;534:407;;;;;;;:::o;1300:546::-;1353:6;;:::i;:::-;1361;;:::i;:::-;1368:4;1373;1512:10;1481:7;:19;1489:10;1481:19;;;;;;;;;;;:29;;;:41;1474:49;;;;;;1574:2;1537:7;:19;1545:10;1537:19;;;;;;;;;;;:34;;;:39;;1530:47;;;;;;1584:21;1594:10;1584:9;:21::i;:::-;1715:7;:19;1723:10;1715:19;;;;;;;;;;;:26;;1743:7;:19;1751:10;1743:19;;;;;;;;;;;:27;;1777:7;:19;1785:10;1777:19;;;;;;;;;;;:34;;;1812:7;:19;1820:10;1812:19;;;;;;;;;;;:25;;;1707:131;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1300:546;;;;;:::o;1029:258::-;1098:4;1160:10;1129:7;:19;1137:10;1129:19;;;;;;;;;;;:29;;;:41;1122:49;;;;;;1184:4;1181:48;;;1227:2;1190:7;:19;1198:10;1190:19;;;;;;;;;;;:34;;;:39;;;;;;;;;;;1181:48;1246:7;:19;1254:10;1246:19;;;;;;;;;;;:34;;;1239:41;;1029:258;;;;:::o;26:1943::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n\ncontract News{\n\n\taddress\tpublic user;\n\tuint private  userType;\n\n\tstruct Articles{//news article information\n\t\tuint articleId;\n\t\taddress authorAddress;\n\t\tstring author;\n\t\tuint articleLength;\n\t\tuint reviewValidity;\n\t\tuint views;\n\t\tstring content;\n\t\t//also add validator address for record\n\t\t\n\t}\n\tmapping(uint => Articles) private article; //map article struct to address //??convert address to int\n\n\tfunction News(uint _type)public{//class constructor function\n\t\tuser = msg.sender;\n\t\tuserType = _type;\n\t}\n\n    function Writer(address _address,uint _articleId,string _author,string _content) payable public returns(bool) {//bring artivleId for map key\n        var art = article[_articleId]; //[_address]\n        \n        art.articleId = _articleId;\n        art.authorAddress = _address;\n        art.author = _author;\n        art.content =  _content;\n        \n        return true;// written to blockchain\n        \n    }\n    //call smart contract to review with user address,articleId, vote (true false)\n    function Reviewer(uint _articleId, bool vote) payable public returns(uint){\n        \n        assert(article[_articleId].articleId==_articleId);\n        if(vote) article[_articleId].reviewValidity +=20;\n        return article[_articleId].reviewValidity;\n    }   \n    \n    function Reader(uint _articleId) view public returns(string ,string,uint,uint){\n            \n\t    //show matched articleId  //?? use for loop to find matching articleid\n\t    assert(article[_articleId].articleId==_articleId);\n\t    assert(article[_articleId].reviewValidity >=20);\n\t    Readcount(_articleId); // used for read count put it should save on blockchain\n\t     //article[_articleId].views +=1;\n\t    return (article[_articleId].author, article[_articleId].content,\n\t    article[_articleId].reviewValidity,article[_articleId].views) ;\n    }\n    \n    function Readcount(uint _articleId) payable public{\n        article[_articleId].views +=1;\n        \n    }\n     \n}",
+  "sourcePath": "/home/doltry/Ethereum-project/newsMedia/contracts/News.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/doltry/Ethereum-project/newsMedia/contracts/News.sol",
+      "exportedSymbols": {
+        "News": [
+          242
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 58,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            242
+          ],
+          "name": "News",
+          "scope": 243
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "user",
+              "scope": 242,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 59,
+                "name": "ElementaryTypeName",
+                "src": "43:7:1"
+              }
+            ],
+            "id": 60,
+            "name": "VariableDeclaration",
+            "src": "43:19:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "userType",
+              "scope": 242,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 61,
+                "name": "ElementaryTypeName",
+                "src": "65:4:1"
+              }
+            ],
+            "id": 62,
+            "name": "VariableDeclaration",
+            "src": "65:22:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "News.Articles",
+              "name": "Articles",
+              "scope": 242,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "articleId",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 63,
+                    "name": "ElementaryTypeName",
+                    "src": "136:4:1"
+                  }
+                ],
+                "id": 64,
+                "name": "VariableDeclaration",
+                "src": "136:14:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "authorAddress",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 65,
+                    "name": "ElementaryTypeName",
+                    "src": "154:7:1"
+                  }
+                ],
+                "id": 66,
+                "name": "VariableDeclaration",
+                "src": "154:21:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "author",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 67,
+                    "name": "ElementaryTypeName",
+                    "src": "179:6:1"
+                  }
+                ],
+                "id": 68,
+                "name": "VariableDeclaration",
+                "src": "179:13:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "articleLength",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 69,
+                    "name": "ElementaryTypeName",
+                    "src": "196:4:1"
+                  }
+                ],
+                "id": 70,
+                "name": "VariableDeclaration",
+                "src": "196:18:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "reviewValidity",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 71,
+                    "name": "ElementaryTypeName",
+                    "src": "218:4:1"
+                  }
+                ],
+                "id": 72,
+                "name": "VariableDeclaration",
+                "src": "218:19:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "views",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 73,
+                    "name": "ElementaryTypeName",
+                    "src": "241:4:1"
+                  }
+                ],
+                "id": 74,
+                "name": "VariableDeclaration",
+                "src": "241:10:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "content",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 75,
+                    "name": "ElementaryTypeName",
+                    "src": "255:6:1"
+                  }
+                ],
+                "id": 76,
+                "name": "VariableDeclaration",
+                "src": "255:14:1"
+              }
+            ],
+            "id": 77,
+            "name": "StructDefinition",
+            "src": "91:227:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "article",
+              "scope": 242,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct News.Articles storage ref)",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct News.Articles storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 78,
+                    "name": "ElementaryTypeName",
+                    "src": "328:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Articles",
+                      "referencedDeclaration": 77,
+                      "type": "struct News.Articles storage pointer"
+                    },
+                    "id": 79,
+                    "name": "UserDefinedTypeName",
+                    "src": "336:8:1"
+                  }
+                ],
+                "id": 80,
+                "name": "Mapping",
+                "src": "320:25:1"
+              }
+            ],
+            "id": 81,
+            "name": "VariableDeclaration",
+            "src": "320:41:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "News",
+              "payable": false,
+              "scope": 242,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_type",
+                      "scope": 96,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 82,
+                        "name": "ElementaryTypeName",
+                        "src": "438:4:1"
+                      }
+                    ],
+                    "id": 83,
+                    "name": "VariableDeclaration",
+                    "src": "438:10:1"
+                  }
+                ],
+                "id": 84,
+                "name": "ParameterList",
+                "src": "437:12:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 85,
+                "name": "ParameterList",
+                "src": "455:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 60,
+                              "type": "address",
+                              "value": "user"
+                            },
+                            "id": 86,
+                            "name": "Identifier",
+                            "src": "487:4:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 254,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 87,
+                                "name": "Identifier",
+                                "src": "494:3:1"
+                              }
+                            ],
+                            "id": 88,
+                            "name": "MemberAccess",
+                            "src": "494:10:1"
+                          }
+                        ],
+                        "id": 89,
+                        "name": "Assignment",
+                        "src": "487:17:1"
+                      }
+                    ],
+                    "id": 90,
+                    "name": "ExpressionStatement",
+                    "src": "487:17:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 62,
+                              "type": "uint256",
+                              "value": "userType"
+                            },
+                            "id": 91,
+                            "name": "Identifier",
+                            "src": "508:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 83,
+                              "type": "uint256",
+                              "value": "_type"
+                            },
+                            "id": 92,
+                            "name": "Identifier",
+                            "src": "519:5:1"
+                          }
+                        ],
+                        "id": 93,
+                        "name": "Assignment",
+                        "src": "508:16:1"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "ExpressionStatement",
+                    "src": "508:16:1"
+                  }
+                ],
+                "id": 95,
+                "name": "Block",
+                "src": "455:73:1"
+              }
+            ],
+            "id": 96,
+            "name": "FunctionDefinition",
+            "src": "424:104:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "Writer",
+              "payable": true,
+              "scope": 242,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 97,
+                        "name": "ElementaryTypeName",
+                        "src": "550:7:1"
+                      }
+                    ],
+                    "id": 98,
+                    "name": "VariableDeclaration",
+                    "src": "550:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_articleId",
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 99,
+                        "name": "ElementaryTypeName",
+                        "src": "567:4:1"
+                      }
+                    ],
+                    "id": 100,
+                    "name": "VariableDeclaration",
+                    "src": "567:15:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_author",
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 101,
+                        "name": "ElementaryTypeName",
+                        "src": "583:6:1"
+                      }
+                    ],
+                    "id": 102,
+                    "name": "VariableDeclaration",
+                    "src": "583:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_content",
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 103,
+                        "name": "ElementaryTypeName",
+                        "src": "598:6:1"
+                      }
+                    ],
+                    "id": 104,
+                    "name": "VariableDeclaration",
+                    "src": "598:15:1"
+                  }
+                ],
+                "id": 105,
+                "name": "ParameterList",
+                "src": "549:65:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 141,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 106,
+                        "name": "ElementaryTypeName",
+                        "src": "638:4:1"
+                      }
+                    ],
+                    "id": 107,
+                    "name": "VariableDeclaration",
+                    "src": "638:4:1"
+                  }
+                ],
+                "id": 108,
+                "name": "ParameterList",
+                "src": "637:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        109
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "art",
+                          "scope": 141,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct News.Articles storage pointer",
+                          "typeName": null,
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [],
+                        "id": 109,
+                        "name": "VariableDeclaration",
+                        "src": "683:7:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct News.Articles storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 81,
+                              "type": "mapping(uint256 => struct News.Articles storage ref)",
+                              "value": "article"
+                            },
+                            "id": 110,
+                            "name": "Identifier",
+                            "src": "693:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 100,
+                              "type": "uint256",
+                              "value": "_articleId"
+                            },
+                            "id": 111,
+                            "name": "Identifier",
+                            "src": "701:10:1"
+                          }
+                        ],
+                        "id": 112,
+                        "name": "IndexAccess",
+                        "src": "693:19:1"
+                      }
+                    ],
+                    "id": 113,
+                    "name": "VariableDeclarationStatement",
+                    "src": "683:29:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "articleId",
+                              "referencedDeclaration": 64,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 109,
+                                  "type": "struct News.Articles storage pointer",
+                                  "value": "art"
+                                },
+                                "id": 114,
+                                "name": "Identifier",
+                                "src": "744:3:1"
+                              }
+                            ],
+                            "id": 116,
+                            "name": "MemberAccess",
+                            "src": "744:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 100,
+                              "type": "uint256",
+                              "value": "_articleId"
+                            },
+                            "id": 117,
+                            "name": "Identifier",
+                            "src": "760:10:1"
+                          }
+                        ],
+                        "id": 118,
+                        "name": "Assignment",
+                        "src": "744:26:1"
+                      }
+                    ],
+                    "id": 119,
+                    "name": "ExpressionStatement",
+                    "src": "744:26:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "authorAddress",
+                              "referencedDeclaration": 66,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 109,
+                                  "type": "struct News.Articles storage pointer",
+                                  "value": "art"
+                                },
+                                "id": 120,
+                                "name": "Identifier",
+                                "src": "780:3:1"
+                              }
+                            ],
+                            "id": 122,
+                            "name": "MemberAccess",
+                            "src": "780:17:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 98,
+                              "type": "address",
+                              "value": "_address"
+                            },
+                            "id": 123,
+                            "name": "Identifier",
+                            "src": "800:8:1"
+                          }
+                        ],
+                        "id": 124,
+                        "name": "Assignment",
+                        "src": "780:28:1"
+                      }
+                    ],
+                    "id": 125,
+                    "name": "ExpressionStatement",
+                    "src": "780:28:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "author",
+                              "referencedDeclaration": 68,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 109,
+                                  "type": "struct News.Articles storage pointer",
+                                  "value": "art"
+                                },
+                                "id": 126,
+                                "name": "Identifier",
+                                "src": "818:3:1"
+                              }
+                            ],
+                            "id": 128,
+                            "name": "MemberAccess",
+                            "src": "818:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 102,
+                              "type": "string memory",
+                              "value": "_author"
+                            },
+                            "id": 129,
+                            "name": "Identifier",
+                            "src": "831:7:1"
+                          }
+                        ],
+                        "id": 130,
+                        "name": "Assignment",
+                        "src": "818:20:1"
+                      }
+                    ],
+                    "id": 131,
+                    "name": "ExpressionStatement",
+                    "src": "818:20:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "content",
+                              "referencedDeclaration": 76,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 109,
+                                  "type": "struct News.Articles storage pointer",
+                                  "value": "art"
+                                },
+                                "id": 132,
+                                "name": "Identifier",
+                                "src": "848:3:1"
+                              }
+                            ],
+                            "id": 134,
+                            "name": "MemberAccess",
+                            "src": "848:11:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 104,
+                              "type": "string memory",
+                              "value": "_content"
+                            },
+                            "id": 135,
+                            "name": "Identifier",
+                            "src": "863:8:1"
+                          }
+                        ],
+                        "id": 136,
+                        "name": "Assignment",
+                        "src": "848:23:1"
+                      }
+                    ],
+                    "id": 137,
+                    "name": "ExpressionStatement",
+                    "src": "848:23:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 108
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 138,
+                        "name": "Literal",
+                        "src": "897:4:1"
+                      }
+                    ],
+                    "id": 139,
+                    "name": "Return",
+                    "src": "890:11:1"
+                  }
+                ],
+                "id": 140,
+                "name": "Block",
+                "src": "644:297:1"
+              }
+            ],
+            "id": 141,
+            "name": "FunctionDefinition",
+            "src": "534:407:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "Reviewer",
+              "payable": true,
+              "scope": 242,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_articleId",
+                      "scope": 174,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 142,
+                        "name": "ElementaryTypeName",
+                        "src": "1047:4:1"
+                      }
+                    ],
+                    "id": 143,
+                    "name": "VariableDeclaration",
+                    "src": "1047:15:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "vote",
+                      "scope": 174,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 144,
+                        "name": "ElementaryTypeName",
+                        "src": "1064:4:1"
+                      }
+                    ],
+                    "id": 145,
+                    "name": "VariableDeclaration",
+                    "src": "1064:9:1"
+                  }
+                ],
+                "id": 146,
+                "name": "ParameterList",
+                "src": "1046:28:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 174,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 147,
+                        "name": "ElementaryTypeName",
+                        "src": "1098:4:1"
+                      }
+                    ],
+                    "id": 148,
+                    "name": "VariableDeclaration",
+                    "src": "1098:4:1"
+                  }
+                ],
+                "id": 149,
+                "name": "ParameterList",
+                "src": "1097:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 245,
+                              "type": "function (bool) pure",
+                              "value": "assert"
+                            },
+                            "id": 150,
+                            "name": "Identifier",
+                            "src": "1122:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "articleId",
+                                  "referencedDeclaration": 64,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct News.Articles storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 81,
+                                          "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                          "value": "article"
+                                        },
+                                        "id": 151,
+                                        "name": "Identifier",
+                                        "src": "1129:7:1"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 143,
+                                          "type": "uint256",
+                                          "value": "_articleId"
+                                        },
+                                        "id": 152,
+                                        "name": "Identifier",
+                                        "src": "1137:10:1"
+                                      }
+                                    ],
+                                    "id": 153,
+                                    "name": "IndexAccess",
+                                    "src": "1129:19:1"
+                                  }
+                                ],
+                                "id": 154,
+                                "name": "MemberAccess",
+                                "src": "1129:29:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 143,
+                                  "type": "uint256",
+                                  "value": "_articleId"
+                                },
+                                "id": 155,
+                                "name": "Identifier",
+                                "src": "1160:10:1"
+                              }
+                            ],
+                            "id": 156,
+                            "name": "BinaryOperation",
+                            "src": "1129:41:1"
+                          }
+                        ],
+                        "id": 157,
+                        "name": "FunctionCall",
+                        "src": "1122:49:1"
+                      }
+                    ],
+                    "id": 158,
+                    "name": "ExpressionStatement",
+                    "src": "1122:49:1"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 145,
+                          "type": "bool",
+                          "value": "vote"
+                        },
+                        "id": 159,
+                        "name": "Identifier",
+                        "src": "1184:4:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+=",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": true,
+                                  "member_name": "reviewValidity",
+                                  "referencedDeclaration": 72,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct News.Articles storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 81,
+                                          "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                          "value": "article"
+                                        },
+                                        "id": 160,
+                                        "name": "Identifier",
+                                        "src": "1190:7:1"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 143,
+                                          "type": "uint256",
+                                          "value": "_articleId"
+                                        },
+                                        "id": 161,
+                                        "name": "Identifier",
+                                        "src": "1198:10:1"
+                                      }
+                                    ],
+                                    "id": 162,
+                                    "name": "IndexAccess",
+                                    "src": "1190:19:1"
+                                  }
+                                ],
+                                "id": 163,
+                                "name": "MemberAccess",
+                                "src": "1190:34:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "3230",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 20",
+                                  "value": "20"
+                                },
+                                "id": 164,
+                                "name": "Literal",
+                                "src": "1227:2:1"
+                              }
+                            ],
+                            "id": 165,
+                            "name": "Assignment",
+                            "src": "1190:39:1"
+                          }
+                        ],
+                        "id": 166,
+                        "name": "ExpressionStatement",
+                        "src": "1190:39:1"
+                      }
+                    ],
+                    "id": 167,
+                    "name": "IfStatement",
+                    "src": "1181:48:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 149
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "reviewValidity",
+                          "referencedDeclaration": 72,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct News.Articles storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 81,
+                                  "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                  "value": "article"
+                                },
+                                "id": 168,
+                                "name": "Identifier",
+                                "src": "1246:7:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 143,
+                                  "type": "uint256",
+                                  "value": "_articleId"
+                                },
+                                "id": 169,
+                                "name": "Identifier",
+                                "src": "1254:10:1"
+                              }
+                            ],
+                            "id": 170,
+                            "name": "IndexAccess",
+                            "src": "1246:19:1"
+                          }
+                        ],
+                        "id": 171,
+                        "name": "MemberAccess",
+                        "src": "1246:34:1"
+                      }
+                    ],
+                    "id": 172,
+                    "name": "Return",
+                    "src": "1239:41:1"
+                  }
+                ],
+                "id": 173,
+                "name": "Block",
+                "src": "1103:184:1"
+              }
+            ],
+            "id": 174,
+            "name": "FunctionDefinition",
+            "src": "1029:258:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "Reader",
+              "payable": false,
+              "scope": 242,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_articleId",
+                      "scope": 228,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 175,
+                        "name": "ElementaryTypeName",
+                        "src": "1316:4:1"
+                      }
+                    ],
+                    "id": 176,
+                    "name": "VariableDeclaration",
+                    "src": "1316:15:1"
+                  }
+                ],
+                "id": 177,
+                "name": "ParameterList",
+                "src": "1315:17:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 228,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 178,
+                        "name": "ElementaryTypeName",
+                        "src": "1353:6:1"
+                      }
+                    ],
+                    "id": 179,
+                    "name": "VariableDeclaration",
+                    "src": "1353:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 228,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 180,
+                        "name": "ElementaryTypeName",
+                        "src": "1361:6:1"
+                      }
+                    ],
+                    "id": 181,
+                    "name": "VariableDeclaration",
+                    "src": "1361:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 228,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 182,
+                        "name": "ElementaryTypeName",
+                        "src": "1368:4:1"
+                      }
+                    ],
+                    "id": 183,
+                    "name": "VariableDeclaration",
+                    "src": "1368:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 228,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 184,
+                        "name": "ElementaryTypeName",
+                        "src": "1373:4:1"
+                      }
+                    ],
+                    "id": 185,
+                    "name": "VariableDeclaration",
+                    "src": "1373:4:1"
+                  }
+                ],
+                "id": 186,
+                "name": "ParameterList",
+                "src": "1352:26:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 245,
+                              "type": "function (bool) pure",
+                              "value": "assert"
+                            },
+                            "id": 187,
+                            "name": "Identifier",
+                            "src": "1474:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "articleId",
+                                  "referencedDeclaration": 64,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct News.Articles storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 81,
+                                          "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                          "value": "article"
+                                        },
+                                        "id": 188,
+                                        "name": "Identifier",
+                                        "src": "1481:7:1"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 176,
+                                          "type": "uint256",
+                                          "value": "_articleId"
+                                        },
+                                        "id": 189,
+                                        "name": "Identifier",
+                                        "src": "1489:10:1"
+                                      }
+                                    ],
+                                    "id": 190,
+                                    "name": "IndexAccess",
+                                    "src": "1481:19:1"
+                                  }
+                                ],
+                                "id": 191,
+                                "name": "MemberAccess",
+                                "src": "1481:29:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 176,
+                                  "type": "uint256",
+                                  "value": "_articleId"
+                                },
+                                "id": 192,
+                                "name": "Identifier",
+                                "src": "1512:10:1"
+                              }
+                            ],
+                            "id": 193,
+                            "name": "BinaryOperation",
+                            "src": "1481:41:1"
+                          }
+                        ],
+                        "id": 194,
+                        "name": "FunctionCall",
+                        "src": "1474:49:1"
+                      }
+                    ],
+                    "id": 195,
+                    "name": "ExpressionStatement",
+                    "src": "1474:49:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 245,
+                              "type": "function (bool) pure",
+                              "value": "assert"
+                            },
+                            "id": 196,
+                            "name": "Identifier",
+                            "src": "1530:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "reviewValidity",
+                                  "referencedDeclaration": 72,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct News.Articles storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 81,
+                                          "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                          "value": "article"
+                                        },
+                                        "id": 197,
+                                        "name": "Identifier",
+                                        "src": "1537:7:1"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 176,
+                                          "type": "uint256",
+                                          "value": "_articleId"
+                                        },
+                                        "id": 198,
+                                        "name": "Identifier",
+                                        "src": "1545:10:1"
+                                      }
+                                    ],
+                                    "id": 199,
+                                    "name": "IndexAccess",
+                                    "src": "1537:19:1"
+                                  }
+                                ],
+                                "id": 200,
+                                "name": "MemberAccess",
+                                "src": "1537:34:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "3230",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 20",
+                                  "value": "20"
+                                },
+                                "id": 201,
+                                "name": "Literal",
+                                "src": "1574:2:1"
+                              }
+                            ],
+                            "id": 202,
+                            "name": "BinaryOperation",
+                            "src": "1537:39:1"
+                          }
+                        ],
+                        "id": 203,
+                        "name": "FunctionCall",
+                        "src": "1530:47:1"
+                      }
+                    ],
+                    "id": 204,
+                    "name": "ExpressionStatement",
+                    "src": "1530:47:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 241,
+                              "type": "function (uint256)",
+                              "value": "Readcount"
+                            },
+                            "id": 205,
+                            "name": "Identifier",
+                            "src": "1584:9:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 176,
+                              "type": "uint256",
+                              "value": "_articleId"
+                            },
+                            "id": 206,
+                            "name": "Identifier",
+                            "src": "1594:10:1"
+                          }
+                        ],
+                        "id": 207,
+                        "name": "FunctionCall",
+                        "src": "1584:21:1"
+                      }
+                    ],
+                    "id": 208,
+                    "name": "ExpressionStatement",
+                    "src": "1584:21:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 186
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string storage ref,string storage ref,uint256,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "author",
+                              "referencedDeclaration": 68,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct News.Articles storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 81,
+                                      "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                      "value": "article"
+                                    },
+                                    "id": 209,
+                                    "name": "Identifier",
+                                    "src": "1715:7:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 176,
+                                      "type": "uint256",
+                                      "value": "_articleId"
+                                    },
+                                    "id": 210,
+                                    "name": "Identifier",
+                                    "src": "1723:10:1"
+                                  }
+                                ],
+                                "id": 211,
+                                "name": "IndexAccess",
+                                "src": "1715:19:1"
+                              }
+                            ],
+                            "id": 212,
+                            "name": "MemberAccess",
+                            "src": "1715:26:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "content",
+                              "referencedDeclaration": 76,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct News.Articles storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 81,
+                                      "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                      "value": "article"
+                                    },
+                                    "id": 213,
+                                    "name": "Identifier",
+                                    "src": "1743:7:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 176,
+                                      "type": "uint256",
+                                      "value": "_articleId"
+                                    },
+                                    "id": 214,
+                                    "name": "Identifier",
+                                    "src": "1751:10:1"
+                                  }
+                                ],
+                                "id": 215,
+                                "name": "IndexAccess",
+                                "src": "1743:19:1"
+                              }
+                            ],
+                            "id": 216,
+                            "name": "MemberAccess",
+                            "src": "1743:27:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "reviewValidity",
+                              "referencedDeclaration": 72,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct News.Articles storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 81,
+                                      "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                      "value": "article"
+                                    },
+                                    "id": 217,
+                                    "name": "Identifier",
+                                    "src": "1777:7:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 176,
+                                      "type": "uint256",
+                                      "value": "_articleId"
+                                    },
+                                    "id": 218,
+                                    "name": "Identifier",
+                                    "src": "1785:10:1"
+                                  }
+                                ],
+                                "id": 219,
+                                "name": "IndexAccess",
+                                "src": "1777:19:1"
+                              }
+                            ],
+                            "id": 220,
+                            "name": "MemberAccess",
+                            "src": "1777:34:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "views",
+                              "referencedDeclaration": 74,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct News.Articles storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 81,
+                                      "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                      "value": "article"
+                                    },
+                                    "id": 221,
+                                    "name": "Identifier",
+                                    "src": "1812:7:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 176,
+                                      "type": "uint256",
+                                      "value": "_articleId"
+                                    },
+                                    "id": 222,
+                                    "name": "Identifier",
+                                    "src": "1820:10:1"
+                                  }
+                                ],
+                                "id": 223,
+                                "name": "IndexAccess",
+                                "src": "1812:19:1"
+                              }
+                            ],
+                            "id": 224,
+                            "name": "MemberAccess",
+                            "src": "1812:25:1"
+                          }
+                        ],
+                        "id": 225,
+                        "name": "TupleExpression",
+                        "src": "1714:124:1"
+                      }
+                    ],
+                    "id": 226,
+                    "name": "Return",
+                    "src": "1707:131:1"
+                  }
+                ],
+                "id": 227,
+                "name": "Block",
+                "src": "1378:468:1"
+              }
+            ],
+            "id": 228,
+            "name": "FunctionDefinition",
+            "src": "1300:546:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "Readcount",
+              "payable": true,
+              "scope": 242,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_articleId",
+                      "scope": 241,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 229,
+                        "name": "ElementaryTypeName",
+                        "src": "1875:4:1"
+                      }
+                    ],
+                    "id": 230,
+                    "name": "VariableDeclaration",
+                    "src": "1875:15:1"
+                  }
+                ],
+                "id": 231,
+                "name": "ParameterList",
+                "src": "1874:17:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 232,
+                "name": "ParameterList",
+                "src": "1906:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "views",
+                              "referencedDeclaration": 74,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct News.Articles storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 81,
+                                      "type": "mapping(uint256 => struct News.Articles storage ref)",
+                                      "value": "article"
+                                    },
+                                    "id": 233,
+                                    "name": "Identifier",
+                                    "src": "1916:7:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 230,
+                                      "type": "uint256",
+                                      "value": "_articleId"
+                                    },
+                                    "id": 234,
+                                    "name": "Identifier",
+                                    "src": "1924:10:1"
+                                  }
+                                ],
+                                "id": 235,
+                                "name": "IndexAccess",
+                                "src": "1916:19:1"
+                              }
+                            ],
+                            "id": 236,
+                            "name": "MemberAccess",
+                            "src": "1916:25:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 237,
+                            "name": "Literal",
+                            "src": "1944:1:1"
+                          }
+                        ],
+                        "id": 238,
+                        "name": "Assignment",
+                        "src": "1916:29:1"
+                      }
+                    ],
+                    "id": 239,
+                    "name": "ExpressionStatement",
+                    "src": "1916:29:1"
+                  }
+                ],
+                "id": 240,
+                "name": "Block",
+                "src": "1906:55:1"
+              }
+            ],
+            "id": 241,
+            "name": "FunctionDefinition",
+            "src": "1856:105:1"
+          }
+        ],
+        "id": 242,
+        "name": "ContractDefinition",
+        "src": "26:1943:1"
+      }
+    ],
+    "id": 243,
+    "name": "SourceUnit",
+    "src": "0:1969:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "1517286841490": {
+      "events": {},
+      "links": {},
+      "address": "0xa1c6ac8eb4fdc7b30456964800e08c19536c5bdd"
+    },
+    "1517316837285": {
+      "events": {},
+      "links": {},
+      "address": "0x6e1ea26e7cfb2172d02f9e13f64e3243d968bd8d"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-30T12:54:16.076Z"
+}

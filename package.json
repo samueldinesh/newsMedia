@@ -1,11 +1,11 @@
 {
-  "name": "newsmedia",
+  "name": "commonmedia",
   "version": "0.0.1",
   "description": "Decentralized News media to ensure the truth of the news and the news by the people to the people over decentralized distributed system(Blockchain).",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,13 @@
     "web3": "github:ethereum/web3.js"
   },
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "bootstrap": "^3.3.7",
+    "eth-ens-namehash": "^2.0.0",
+    "jquery": "^3.2.1",
+    "json-loader": "^0.5.7",
+    "truffle-contract": "^3.0.0",
+    "web3": "^0.20.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
   }
 }
