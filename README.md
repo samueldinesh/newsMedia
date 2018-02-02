@@ -19,8 +19,8 @@ install truffle "npm install -g truffle@4.0.5"
 Instasl Metamask extention in chrome to run blockchain in chrome browser
 
 ### Run
-$ git clone https://github.com/samueldinesh/Proof-of-Certificate-2.git
-$ cd ProofOfCertificate/
+$ git clone https://github.com/samueldinesh/newsMedia.git
+$ cd newsMedia/
 $ npm install
 $ testrpc in another terminal
 $ truffle migrate
